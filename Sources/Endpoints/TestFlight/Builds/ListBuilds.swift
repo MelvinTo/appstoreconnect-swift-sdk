@@ -95,6 +95,7 @@ public enum ListBuilds {
         case appStoreVersion([String])
         case betaAppReviewSubmissionBetaReviewState([String])
         case betaGroups([String])
+        case buildBetaGroups([String])
         case expired([String])
         case id([String])
         case preReleaseVersion([String])
@@ -115,6 +116,8 @@ public enum ListBuilds {
                 return ("betaAppReviewSubmission.betaReviewState", value.joinedByCommas())
             case .betaGroups(let value):
                 return ("betagroup", value.joinedByCommas())
+            case .buildBetaGroups(let value):
+                return ("betaGroups", value.joinedByCommas())
             case .expired(let value):
                 return ("expired", value.joinedByCommas())
             case .id(let value):
